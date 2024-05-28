@@ -1,5 +1,6 @@
 package com.example.demo_app
 
+import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Path
 import android.os.Bundle
@@ -9,6 +10,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.demo_app.PaintView.Companion.colorList
+import com.example.demo_app.PaintView.Companion.currentBrush
+import com.example.demo_app.PaintView.Companion.pathList
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,18 +38,33 @@ class MainActivity : AppCompatActivity() {
 
         redBtn.setOnClickListener {
             Toast.makeText(this,"Clicked", Toast.LENGTH_SHORT).show()
+            paintBrush.setColor(Color.RED)
+            currentColor(paintBrush.color)
         }
 
         blueBtn.setOnClickListener {
             Toast.makeText(this,"Clicked", Toast.LENGTH_SHORT).show()
+            paintBrush.setColor(Color.BLUE)
+            currentColor(paintBrush.color)
         }
 
         blackBtn.setOnClickListener {
             Toast.makeText(this,"Clicked", Toast.LENGTH_SHORT).show()
+            paintBrush.setColor(Color.BLACK)
+            currentColor(paintBrush.color)
         }
 
         eraser.setOnClickListener {
             Toast.makeText(this,"Clicked", Toast.LENGTH_SHORT).show()
+            pathList.clear()
+            colorList.clear()
+            pathUtils.reset()
         }
+
+
+    }
+    private fun currentColor(color: Int) {
+        currentBrush = color
+        pathUtils = Path()
     }
 }
