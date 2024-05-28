@@ -11,7 +11,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/purple"
+        android:background="@drawable/toolbar_background"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -23,25 +23,25 @@
             android:background="@drawable/red_background"/>
 
         <ImageButton
-            android:id="@+id/redColor"
+            android:id="@+id/blueColor"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="10dp"
-            android:background="@drawable/red_background"/>
+            android:background="@drawable/blue_background"/>
 
         <ImageButton
-            android:id="@+id/redColor"
+            android:id="@+id/blackColor"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="10dp"
-            android:background="@drawable/red_background"/>
+            android:background="@drawable/black_background"/>
 
         <ImageButton
-            android:id="@+id/redColor"
+            android:id="@+id/whiteColor"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="10dp"
-            android:background="@drawable/red_background"/>
+            android:background="@drawable/white_background"/>
 
     </LinearLayout>
 
